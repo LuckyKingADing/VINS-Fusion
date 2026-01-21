@@ -223,7 +223,7 @@ void cam_switch_callback(const std_msgs::BoolConstPtr &switch_msg)
 
 int main(int argc, char **argv)
 {
-    ros::init(argc, argv, "vins_estimator");
+    ros::init(argc, argv, "vins_estimator"); // 
     ros::NodeHandle n("~");
     ros::console::set_logger_level(ROSCONSOLE_DEFAULT_NAME, ros::console::levels::Info);
 
