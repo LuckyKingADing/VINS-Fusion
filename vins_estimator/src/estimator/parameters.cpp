@@ -149,8 +149,8 @@ void readParameters(std::string config_file)
     }
 
 
-    int pn = config_file.find_last_of('/');
-    std::string configPath = config_file.substr(0, pn);
+    int pn = config_file.find_last_of('/'); // 找到最后一个'/'的位置，返回索引，
+    std::string configPath = config_file.substr(0, pn);// 从索引0开始，截取到pn位置的字符串，就是路径，例如 "/home/xxx/vins_estimator/config/euroc.yaml" 截取到 "/home/xxx/vins_estimator/config" 这个路径
     
     std::string cam0Calib;
     fsSettings["cam0_calib"] >> cam0Calib;
